@@ -1,0 +1,127 @@
+ body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(16, 143, 25);
+ }
+ .sense {
+    position: relative;
+    cursor: pointer;
+ }
+ .sa:hover {
+    letter-spacing: 3px;
+ }
+ .sa {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    background: #f9f9f92b;
+    box-shadow:  0 0 10px rgba(0,0,0,0.7);
+    padding: 10px 30px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    backdrop-filter: blur(40px);
+    transition: 1s;
+ }
+ .sa:hover::before {
+    left: 110%;
+ }
+ .sa::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    width: 60%;
+    background: #ffffff2e;
+    transform: skew(50deg);
+    z-index: -2;
+    transition: 0.3s;
+ }
+ .sa a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+    z-index: 2000;
+ }
+ .btn {
+    position: relative;
+ }
+ .sense:hover .btn::before {
+    width: 70px;
+    left: 65px;
+    top: 20px;
+ }
+ .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    gap: 20px;
+    border: 3px solid rgb(13, 0, 255);
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 8, 255, 0.7),
+    0 0 25px rgba(4, 0, 255, 0.7);
+}
+input {
+    padding: 10px;
+    border-radius: 20px;
+    width: 300px;
+    border: 2px solid #0015ff;
+    box-shadow: inset 0 0 5px rgba(0, 8, 255, 0.7);
+    background: transparent;
+    outline: none;
+    filter: hue-rotate(250px);
+    color: #fff;
+}
+input::placeholder {
+    color: #fff;
+}
+textarea {
+    background: transparent;
+    border: 2px solid #0015ff;
+    box-shadow: inset 0 0 5px rgba(0, 8, 255, 0.7);
+    border-radius: 20px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    color: #fff;
+}
+textarea::placeholder {
+    color: #fff;
+}
+.israel {
+    width: 150px;
+}
+h2 {
+    color: #fff;
+    font-family: sans-serif;
+    margin: 0;
+}
+button:hover {
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #0032fc, #0099ff);
+}
+button {
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(45deg, #0032fc, #0099ff);
+    border: none;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#status {
+    background: rgb(0, 255, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+    padding: 10px;
+}
